@@ -27,8 +27,58 @@
     <th>reason why you recommend it</th>
     <th>how many hours in an average week</th>
 </tr>
+<tr>
+    <td>Badmintion</td>
+    <td>reduces the fat</td>
+    <td>3 hrs</td>   
+</tr>
+<tr>
+    <td>Cricket</td>
+    <td>Improves our concertration </td>
+    <td>4 hrs</td>
+</tr>
+<tr>
+    <td>Carrom</td>
+    <td>Improves thinking power</td>
+    <td>3 hrs</td>
+</tr>
     </table>
-    
+    <hr>
+    <h3>Code</h3>
+    <blockquote>Site="https://css-tricks.com/snippets/wordpress/get-the-first-image-from-a-post">Get The First Image From a Post</blockquote>
+    <pre>
+        function catch_that_image() {
+            global $post, $posts;
+            $first_img = '';
+            ob_start();
+            ob_end_clean();
+            $output = preg_match_all('/<img.+?src=[\'"]([^\'"]+)[\'"].*?>/i', $post->post_content, $matches);
+            $first_img = $matches[1][0];
+          
+            if(empty($first_img)) {
+              $first_img = "/path/to/default.png";
+            }
+            return $first_img;
+          }
+          if ( get_the_post_thumbnail($post_id) != '' ) {
+
+            echo '"a href="'; the_permalink(); 
+            echo '" class="thumbnailwrapper";
+             the_post_thumbnail();
+            echo '';
+          
+          } else {
+          
+           echo 'a href="'; the_permalink(); 
+           echo '" class="thumbnailwrapper"';
+           echo 'img src="';
+           echo catch_that_image();
+           echo '" alt="" ';
+           echo '';
+          
+          }
+    </pre>
+
 
 </body>
 </html>
