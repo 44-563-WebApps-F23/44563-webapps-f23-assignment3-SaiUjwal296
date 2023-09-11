@@ -3,4 +3,7 @@
 Assignment 3 - Basic HTML
 Hosted at : <a href="https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment3-SaiUjwal296/index.html">Click here for index.html</a>
 
+<a href="https://github.com/44-563-WebApps-F23/44563-webapps-f23-assignment3-SaiUjwal296/settings/pages">Click here for Github pages</a>
+
+
 
